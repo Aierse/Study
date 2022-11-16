@@ -1,9 +1,11 @@
 abstract class User {
     constructor(
-        private firstname: string,
-        private lastname: string,
-        public nickname: string
+        protected firstname: string,
+        protected lastname: string,
+        protected nickname: string
     ) { }
+
+    abstract getNickName(): void
 
     getFullName() {
         return `${this.firstname} ${this.lastname}`
@@ -11,10 +13,12 @@ abstract class User {
 }
 
 class Player4_0 extends User {
-
+    getNickName(): void {
+        console.log(this.nickname)
+    }
 }
 
 const jo4_0 = new Player4_0("조", "윤혁", "Aierse")
 
-console.log(jo4_0.nickname)
-console.log(jo4_0.getFullName)
+console.log(jo4_0.getFullName())
+console.log(jo4_0.getNickName())
