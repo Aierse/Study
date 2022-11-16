@@ -18,6 +18,9 @@ class Dict {
         return this.words[term]
     }
     // Code Challenge
+    remove(term:string) {
+        delete this.words[term]
+    }
     // update Overload Signature
     update(key: Word): void
     update(term: string, def: string): void
@@ -50,4 +53,7 @@ dict.update("kimchi", "string overload")
 console.log(dict.def('kimchi'))
 
 dict.update(new Word('kimchi', "word overload"))
+console.log(dict.def('kimchi'))
+
+dict.remove('kimchi')
 console.log(dict.def('kimchi'))
