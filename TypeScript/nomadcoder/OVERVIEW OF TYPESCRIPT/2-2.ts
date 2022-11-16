@@ -3,12 +3,9 @@ type Player = {
     age?: number
 }
 
-function playerMaker(name: string): Player {
-    return {
-        name
-    }
-}
-
+const playerMaker = (name: string): Player => (
+    { name }
+)
 const jo = playerMaker("jo")
 jo.age = 25
 
