@@ -40,6 +40,10 @@ class Word {
         public term: string,
         public def: string
     ) { }
+    // Code Challenge
+    toString() {
+        return `${this.term} : ${this.def}`
+    }
 }
 
 const kimchi4_1 = new Word("kimchi", "한국의 음식")
@@ -57,3 +61,5 @@ console.log(dict.def('kimchi'))
 
 dict.remove('kimchi')
 console.log(dict.def('kimchi'))
+
+console.log(kimchi4_1.toString())
