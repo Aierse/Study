@@ -29,7 +29,7 @@ class Dict {
         if (key instanceof Word) {
             this.words[key.term] = key.def
         }
-        else if (key === def) {
+        else if (def) {
             this.words[key] = def
         }
     }
