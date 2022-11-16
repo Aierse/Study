@@ -20,13 +20,13 @@ class Dict {
     // Code Challenge
     // update Overload Signature
     update(key: Word): void
-    update(term:string, def: string): void
+    update(term: string, def: string): void
 
     update(key: string | Word, def?: string): void {
         if (key instanceof Word) {
             this.words[key.term] = key.def
-        } 
-        else if (def) {
+        }
+        else if (key === def) {
             this.words[key] = def
         }
     }
