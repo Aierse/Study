@@ -6,6 +6,7 @@ class LocalStorage<T> {
     private storage: SStorage<T> = {}
 
     set(key:string, value: T) {
+        // Code Challenge
         if (this.storage[key] === undefined) {
             this.storage[key] = value
         }
@@ -29,7 +30,10 @@ class LocalStorage<T> {
 
 const stringsStorage = new LocalStorage<string>()
 
-stringsStorage.get("ket")
+stringsStorage.set("ket", "ttt")
+stringsStorage.set("ket", "ttt2")
+
+console.log(stringsStorage.get("ket"))
 
 const booleansStorage = new LocalStorage<boolean>()
 booleansStorage.get("xxx")
