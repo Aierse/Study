@@ -5,6 +5,8 @@
 
     "compilerOptions": {
         "outDir": "build",
-        "target": "ES6"
+        "target": "ES6",
+        "lib": ["ES6"],
+        "strict": true
     }
 }
