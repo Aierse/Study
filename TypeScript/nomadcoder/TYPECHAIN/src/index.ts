@@ -1,9 +1,2 @@
-import {init, exit} from "./myPackage"
-
-init({
-    url: "true"
-})
-
-exit(1)
-
-localStorage.clear()
+console.log('hi')
+console.log("bye")
