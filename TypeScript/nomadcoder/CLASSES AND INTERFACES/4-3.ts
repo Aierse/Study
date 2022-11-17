@@ -1,14 +1,16 @@
-abstract class User4_3 {
-    constructor(
-        protected firstname: string,
-        protected lastname: string
-    ) { }
+interface User4_3 {
+    firstname: string,
+    lastname: string
 
-    abstract sayHi(name: string): string
-    abstract fullName(): string
+    sayHi(name: string): string
+    fullName(): string
 }
 
-class Player4_3 extends User4_3 {
+class Player4_3 implements User4_3 {
+    constructor(
+        public firstname: string,
+        public lastname: string
+    ) { }
     fullName(): string {
         return `${this.firstname} ${this.lastname}`
     }
