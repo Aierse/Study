@@ -36,6 +36,20 @@ class BlockChain {
     }
 
     public addBlock(data: string) {
-        const block = new Block(this.getPrevHash(), this.blocks.length + 1, data)
+        const newBlock = new Block(this.getPrevHash(), this.blocks.length + 1, data)
+        this.blocks.push(newBlock)
+    }
+
+    public getBlock() {
+        return [...this.blocks]
     }
 }
+
+const blockChain = new BlockChain()
+
+blockChain.addBlock("First One")
+blockChain.addBlock("Second One")
+blockChain.addBlock("Third One")
+blockChain.addBlock("Fourth One")
+
+console.log(blockChain.getBlock())
