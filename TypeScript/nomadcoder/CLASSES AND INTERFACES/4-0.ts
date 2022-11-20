@@ -7,8 +7,8 @@ abstract class User {
 
     abstract getNickName(): void
 
-    getFullName() {
-        return `${this.firstname} ${this.lastname}`
+    get fullName():string {
+        return `${this.firstname}${this.lastname}`
     }
 }
 
@@ -20,5 +20,6 @@ class Player4_0 extends User {
 
 const jo4_0 = new Player4_0("조", "윤혁", "Aierse")
 
-console.log(jo4_0.getFullName())
+console.log(jo4_0.fullName)
 console.log(jo4_0.getNickName())
+console.log(jo4_0.fullname)
