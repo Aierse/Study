@@ -22,4 +22,3 @@ const jo4_0 = new Player4_0("조", "윤혁", "Aierse")
 
 console.log(jo4_0.fullName)
 console.log(jo4_0.getNickName())
-console.log(jo4_0.fullname)
