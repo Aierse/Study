@@ -1,10 +1,5 @@
-import { IsString, IsNumber } from "class-validator";
+import { PartialType } from "@nestjs/mapped-types";
+import { CreateMovieDto } from "src/movies/dto/create-movie.dto";
 
-export class CreateMovieDto {
-    @IsString()
-    title?: string;
-    @IsNumber()
-    year?: number;
-    @IsString({ each: true })
-    genres?: string[];
+export class UpdateMovieDto extends PartialType(CreateMovieDto) {
 }
