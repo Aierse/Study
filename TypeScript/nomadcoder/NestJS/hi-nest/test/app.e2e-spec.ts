@@ -40,5 +40,11 @@ describe('AppController (e2e)', () => {
         })
         .expect(201)
     })
+
+    it('DELETE', () => {
+      return request(app.getHttpServer())
+        .delete('/movies')
+        .expect(404)
+    })
   })
 });
