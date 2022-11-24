@@ -22,10 +22,12 @@ describe('AppController (e2e)', () => {
       .expect('Welcome to my Movie API');
   });
 
-  it('/movies (GET)', () => {
-    return request(app.getHttpServer())
-      .get('/movies')
-      .expect(200)
-      .expect([]);
+  describe('/movies', () => {
+    it('GET', () => {
+      return request(app.getHttpServer())
+        .get('/movies')
+        .expect(200)
+        .expect([]);
+    })
   })
 });
