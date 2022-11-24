@@ -60,5 +60,13 @@ describe('MoviesService', () => {
       const afterDelete = service.getAll().length
       expect(afterDelete).toBeLessThan(beforeDelete)
     })
+
+    it('should throw 404 error', () => {
+      try {
+        service.deleteOne(999)
+      } catch (e) {
+        expect(e).toBeInstanceOf(NotFoundException)
+      }
+    })
   })
 });
