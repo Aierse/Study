@@ -58,5 +58,10 @@ describe('AppController (e2e)', () => {
       return request(app.getHttpServer()).get('/movies/1')
       .expect(200)
     })
+
+    it('GET 404', () => {
+      return request(app.getHttpServer()).get('/movies/999')
+      .expect(404)
+    })
   })
 });
