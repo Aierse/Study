@@ -28,4 +28,4 @@ const numberList: {
 // using
 console.log(numberList['zero'])
 ```
-위의 코드에서 익명 타입으로 Dicionary를 적용시켜주었다. 만약 익명 타입을 지정해주지 않으면 numberList<span style="color:red">[index]</span> 위치에서 string형을 인덱스로 사용할 수 없다는 오류가 난다.
+위의 코드에서 익명 타입으로 Dicionary를 적용시켜주었다. 만약 익명 타입을 지정해주지 않으면 numberList<u>[index]</u> 위치에서 string형을 인덱스로 사용할 수 없다는 오류가 난다.
