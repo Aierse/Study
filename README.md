@@ -21,9 +21,13 @@ package-lock.json 파일은 파일이 작성된 시점의 의존성 트리를 �
 ### tsconfig.json
 타입스크립트 컴파일러 옵션 설정 파일
 #### 자주 사용되는 옵션
+<details>
+        <summary>compilerOptions</summary>
 + target : 
 + module : 
 + outDir : 컴파일 결과물을 저장하는 폴더 "./dist" 가 자주 사용된다.
+</details>
+        
 ### node_modules 폴더
 
 
