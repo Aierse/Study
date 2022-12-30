@@ -1,4 +1,4 @@
-# TypeScript Study
+# TypeScript 환경 설정
 ```
 npm init : package.json 작성 | -y옵션 사용시 기본값 작성
 tsc -init : tsconfig.json 생성(stub 값이 존재)
