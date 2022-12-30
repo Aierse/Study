@@ -11,6 +11,7 @@ npm init -y
 npm i typescript : 타입스크립트 설치
 touch tsconfig.json : tsconfig.json 생성(빈파일)
 ```
+
 ## Dictionary
 ```typescript
 type dictionary = {
@@ -30,3 +31,15 @@ console.log(numberList['zero'])
 ```
 위의 코드에서 익명 타입으로 Dicionary를 적용시켜주었다. 만약 익명 타입을 지정해주지 않으면 numberList
 **[index]** 위치에서 string형을 인덱스로 사용할 수 없다는 오류가 난다.
+
+## Destructuring(비구조화)[디스트럭쳐링]
+변수에 값을 할당을 하면서 구조화되어 있는 객체(Object, Array 등)를 즉각 분리 시켜 변수에 할당해주는 기능
+```typescript
+const [a, b] = [10, 20] // a = 10, b = 20
+
+// 사용하고 싶은 위치만 할당받고 싶다면 쉼표를 이용해서 생략시킬 수 있다. 
+const [, b] = [10, 20] // b = 20
+
+// 변수로 할당하고 나머지는 배열로 할당하고 싶다면 전개 연산자와 응용해서 사용할 수 있다
+const [a, b, ...c] = [10, 20, 30, 40, 50] // a = 10, b = 20, c = [30, 40, 50]
+```
