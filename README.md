@@ -44,5 +44,5 @@ const [, b] = [10, 20] // b = 20
 const [a, b, ...c] = [10, 20, 30, 40, 50] // a = 10, b = 20, c = [30, 40, 50]
 ```
 
-## Object Destructuring
+### Object Destructuring
 
