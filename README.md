@@ -13,7 +13,7 @@
         <summary>"compilerOptions"</summary>
 * target : 
 * module : 
-* outDir : 컴파일 결과물을 저장하는 폴더 **"./dist"** 가 자주 사용된다.
+* outDir : 컴파일 결과물을 저장하는 폴더 __"./dist"__ 가 자주 사용된다.
 </details>
 ### node_modules 폴더
 
