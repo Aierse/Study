@@ -1,15 +1,43 @@
-# TypeScript 환경 설정
+# TypeScript
+
+## 폴더 및 파일
+
+### package-lock.json
+
+### pakage.json
+
+### tsconfig.json
+타입스크립트 컴파일러 옵션 설정 파일
+#### 자주 사용되는 옵션
+<details>"compilerOptions"
+* target : 
+* module : 
+* outDir : 컴파일 결과물을 저장하는 폴더 **"./dist"** 가 자주 사용된다.
+</details>
+### node_modules 폴더
+
+
+## npm
+### npm install
+패키지 및 확장 프로그램 설치  
+
+#### 옵션
+-D : devDependencies 으로 설치
+
+
+## 환경설정
+제일 기본이 되는 환경설정
 ```
 npm init : package.json 작성 | -y옵션 사용시 기본값 작성
-tsc -init : tsconfig.json 생성(stub 값이 존재)
-npm install ts-node : Typescript를 node로 바로 실행할 수 있도록 만들어주는 ts-node 설치
-npm install @types/node : Javascript 모듈을 사용할 수 있도록 환경 조성
-```
-
-```
-npm init -y 
 npm i typescript : 타입스크립트 설치
 touch tsconfig.json : tsconfig.json 생성(빈파일)
+```
+자주 사용되는 패키지 및 확장 프로그램
+```
+npm init -y
+tsc -init : tsconfig.json 생성(stub 값이 존재)
+npm install -D ts-node : Typescript를 node로 바로 실행할 수 있도록 만들어주는 ts-node 설치
+npm install @types/node : Javascript 모듈을 사용할 수 있도록 환경 조성
 ```
 
 
@@ -30,6 +58,7 @@ const numberList: { [anyKeyword: string]: number } = {
 // using
 console.log(numberList['zero'])
 ```
+
 
 ## Destructuring(비구조화)[디스트럭쳐링]
 변수에 값을 할당을 하면서 구조화되어 있는 객체(Object, Array 등)를 즉각 분리 시켜 변수에 할당해주는 기능
