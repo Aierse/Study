@@ -49,12 +49,9 @@ url 항목과는 다르며, url을 설정하면 예상치 못한 움직임을 �
 ### tsconfig.json
 타입스크립트 컴파일러 옵션 설정 파일
 #### 자주 사용되는 옵션
-<details>
-        <summary>"compilerOptions"</summary>
-* target : 
-* module : 
-* outDir : 컴파일 결과물을 저장하는 폴더 "./dist" 가 자주 사용된다.
-</details>
++ target : 
++ module : 
++ outDir : 컴파일 결과물을 저장하는 폴더 "./dist" 가 자주 사용된다.
 ### node_modules 폴더
 
 
