@@ -11,9 +11,9 @@
 #### 자주 사용되는 옵션
 <details>
         <summary>"compilerOptions"</summary>
-        * target : 
-        * module : 
-        * outDir : 컴파일 결과물을 저장하는 폴더 **"./dist"** 가 자주 사용된다.
+* target : 
+* module : 
+* outDir : 컴파일 결과물을 저장하는 폴더 **"./dist"** 가 자주 사용된다.
 </details>
 ### node_modules 폴더
 
