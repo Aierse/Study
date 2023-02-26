@@ -9,7 +9,7 @@
   <script type="text/babel">
     const root = document.getElementById("root");
 
-    function App() {
+    function MinutesToHours() {
       const [amount, setAmount] = React.useState(0);
       const [inverted, setInverted] = React.useState(false);
 
@@ -26,7 +26,6 @@
 
       return (
         <div>
-          <h1>Super Converter</h1>
           <div>
             <label htmlFor="minutes">Minutes</label>
             <input
@@ -53,6 +52,30 @@
           <button onClick={onInvert}>
             {inverted ? "Turn back" : "Invert"}
           </button>
+        </div>
+      );
+    }
+
+    function KmToMiles() {
+      return <h3>KM 2 M</h3>;
+    }
+
+    function App() {
+      const [index, setIndex] = React.useState(0);
+      const onSelect = (event) => {
+        setIndex(event.target.value);
+      };
+      const list = [<MinutesToHours />, <KmToMiles />];
+
+      return (
+        <div>
+          <h1>Super Converter</h1>
+          <select value={index} onChange={onSelect}>
+            <option value="0">Minutes & Hours</option>
+            <option value="2">Km & Miles</option>
+          </select>
+          <hr />
+          {list[index]}
         </div>
       );
     }
