@@ -29,7 +29,7 @@ function Btn에서 매개변수로 props를 받는다. App에서 Btn을 사용�
 ### shortcut
 props의 응용으로 실무에서 더 자주 사용된다. Destructuring(비구조화)으로 구조분해하여 사용한다.
 ```js
-function Btn({ text, changeValue) {
+function Btn({ text, changeValue }) {
       return (
         <button onClick={changeValue>
           {text}
