@@ -5,9 +5,9 @@
 <body id="root">
 </body>
 <script src="https://unpkg.com/react@17.0.2/umd/react.production.min.js"></script>
-  <script src="https://unpkg.com/react-dom@17.0.2/umd/react-dom.production.min.js"></script>
-  <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
-  <script type="text/babel">
+<script src="https://unpkg.com/react-dom@17.0.2/umd/react-dom.production.min.js"></script>
+<script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+<script type="text/babel">
     const root = document.getElementById("root");
 
     function App() {
@@ -17,7 +17,7 @@
     }
 
     ReactDOM.render(<App />, root);
-  </script>
+</script>
 </html>
 ```
 ## useState
