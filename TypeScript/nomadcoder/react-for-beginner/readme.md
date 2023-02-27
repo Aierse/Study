@@ -1,5 +1,25 @@
 # 리액트
 리액트란 상호작용하는 동적 웹 페이지를 더욱 쉽고 효과적으로 개발하기 위해 만들어진 라이브러리이다.
+## 시작
+```js
+<body id="root">
+</body>
+<script src="https://unpkg.com/react@17.0.2/umd/react.production.min.js"></script>
+  <script src="https://unpkg.com/react-dom@17.0.2/umd/react-dom.production.min.js"></script>
+  <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+  <script type="text/babel">
+    const root = document.getElementById("root");
+
+    function App() {
+      return (
+        <div>Hello World!</div>
+      );
+    }
+
+    ReactDOM.render(<App />, root);
+  </script>
+</html>
+```
 ## useState
 
 ## props
