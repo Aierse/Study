@@ -4,5 +4,6 @@
 ## Language
 #### [Typescript](https://github.com/Aierse/Study/tree/main/TypeScript)
 ## Library & Framework
-#### [NestJS](https://github.com/Aierse/Study/tree/main/TypeScript/nomadcoder/NestJS)
-#### [ReactJS](https://github.com/Aierse/Study/tree/main/TypeScript/nomadcoder/react-for-beginner)
+#### Typescript [NestJS](https://github.com/Aierse/Study/tree/main/TypeScript/nomadcoder/NestJS)
+#### Javascript [ReactJS](https://github.com/Aierse/Study/tree/main/TypeScript/nomadcoder/react-for-beginner)
+#### PHP [Laravel]https://github.com/Aierse/Study/tree/main/php/Laravel)
