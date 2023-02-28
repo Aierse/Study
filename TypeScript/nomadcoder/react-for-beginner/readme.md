@@ -51,7 +51,7 @@ props의 응용으로 실무에서 더 자주 사용된다. Destructuring(비구
 ```js
 function Btn({ text, changeValue }) {
       return (
-        <button onClick={changeValue>
+        <button onClick={changeValue}>
           {text}
         </button>
       );
