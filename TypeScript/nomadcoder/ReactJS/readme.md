@@ -14,3 +14,6 @@ React-DOM은 React로 부터 받은 변경 사항 snap shot과 실제 브라우�
 npx create-react-app 프로젝트이름
 npm run start
 ```
+처음 리액트를 시작하는 경우 함께 생성하는 파일 때문에 리액트를 완전하게 이해하기 어려울 수 있다.  
+[간소화된 버전](https://github.com/Aierse/Study/tree/6eb0dafe4233f13172556aa3d785c29b1531a523/TypeScript/nomadcoder/ReactJS/react-for-beginners)은 Hello Welcome! 만을 출력하는 버전이다.
+간소화된 버전을 만들고 싶다면 [변경점](https://github.com/Aierse/Study/commit/6eb0dafe4233f13172556aa3d785c29b1531a523)을 참조
