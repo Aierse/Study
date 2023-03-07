@@ -18,6 +18,28 @@ npm run start
 [간소화된 버전](https://github.com/Aierse/Study/tree/6eb0dafe4233f13172556aa3d785c29b1531a523/TypeScript/nomadcoder/ReactJS/react-for-beginners)은 Welcome Back! 만을 출력하는 버전이다.  
 간소화된 버전을 만들고 싶다면 [변경점](https://github.com/Aierse/Study/commit/6eb0dafe4233f13172556aa3d785c29b1531a523)을 참조
 
+## 주요 기능
+### useState
+```js
+const [value, setValue] = useState();
+const onClick = () => setValue(prev => prev + 1);
+```
+
+useState는 데이터와 데이터를 변경하는 함수를 리턴한다.
+### useEffect
+```js
+const [value, setValue] = useState();
+const onClick = () => setValue(prev => prev + 1);
+
+useEffect(() => {
+  // 작업
+  // 클린업 함수
+  return () => console.log("컴포넌트 파괴됨")
+}, [value]);
+```
+useEffect는 다른 값이 바뀌어도 렌더링되는 useState대신, 두번째 매개변수(배열)의 변화만 감지하여, 해당 값이 변경되는 경우에만 실행된다.  
+다른 값이 수정되어도 렌더링되는 useState와 달리 원하는 대상만 렌더링 시킬 수 있기에 자주 사용된다.
+
 ## 확장
 ```
 npm i prop-types // 컴포넌트 props의 타입을 검사해주는 확장
