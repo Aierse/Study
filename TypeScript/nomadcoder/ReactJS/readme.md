@@ -15,8 +15,7 @@ npx create-react-app 프로젝트이름
 npm run start
 ```
 처음 리액트를 시작하는 경우 함께 생성하는 파일 때문에 리액트를 완전하게 이해하기 어려울 수 있다.  
-[간소화된 버전](https://github.com/Aierse/Study/tree/6eb0dafe4233f13172556aa3d785c29b1531a523/TypeScript/nomadcoder/ReactJS/react-for-beginners)은 Welcome Back! 만을 출력하는 버전이다.  
-간소화된 버전을 만들고 싶다면 [변경점](https://github.com/Aierse/Study/commit/6eb0dafe4233f13172556aa3d785c29b1531a523)을 참조
+[간소화된 버전](https://github.com/Aierse/Study/tree/6eb0dafe4233f13172556aa3d785c29b1531a523/TypeScript/nomadcoder/ReactJS/react-for-beginners)은 Welcome Back! 만을 출력하는 버전이다.
 
 ## 주요 기능
 ### useState
@@ -41,6 +40,57 @@ useEffect(() => {
 ```
 useEffect는 다른 값이 바뀌어도 렌더링되는 useState대신, 두번째 매개변수(배열)의 변화만 감지하여, 해당 값이 변경되는 경우에만 실행된다.  
 다른 값이 수정되어도 렌더링되는 useState와 달리 원하는 대상만 렌더링 시킬 수 있기에 자주 사용된다.
+
+### props
+props란 부모 컴포넌트에서 자식 컴포넌트에게 데이터를 전달할 때 활용된다.
+```js
+function Btn(props) {
+      return (
+        <button onClick={props.changeValue}>
+          {props.text}
+        </button>
+      );
+    }
+
+function App() {
+      const [value, setValue] = useState("Save Changes");
+      const changeValue = () => setValue("Revert Changes");
+
+      return (
+        <div>
+          <Btn text={value} changeValue={changeValue} />
+          <Btn text="Confirm" big={false} />
+        </div>
+      );
+    }
+```
+function Btn에서 매개변수로 props를 받는다.  
+App에서 Btn 컴포넌트를 사용할 때 넘겨줄 속성 값을 나열하면 해당 속성의 이름과 값을 key & value의 형태로 만든다.  
+Btn에서는 props 프로퍼티로 해당 값들을 받는다.
+### shortcut
+props의 응용으로 Destructuring(비구조화)으로 구조분해하여 사용한다. 결과는 위 코드와 동일하다.  
+더 직관적이고, 사용하기 편리해 **shortcut이 실무에서 더 자주 사용된다.**
+```js
+function Btn({ text, changeValue }) {
+      return (
+        <button onClick={changeValue}>
+          {text}
+        </button>
+      );
+    }
+
+function App() {
+      const [value, setValue] = useState("Save Changes");
+      const changeValue = () => setValue("Revert Changes");
+
+      return (
+        <div>
+          <Btn text={value} changeValue={changeValue} />
+          <Btn text="Confirm" big={false} />
+        </div>
+      );
+    }
+```
 
 ## 확장
 ```
