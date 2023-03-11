@@ -100,6 +100,26 @@ function App() {
 ```
 
 ## 확장
+### prop-types
+컴포넌트 props의 타입을 검사해주는 확장 
+#### 설치
 ```
-npm i prop-types // 컴포넌트 props의 타입을 검사해주는 확장
+npm i prop-types 
 ```
+#### 예시
+```js
+import PropTypes from "prop-types";
+
+function Movie({coverImg, title, summary, genres}) {
+  return //매우 적절한 코드
+}
+
+Movie.propTypes = {
+  coverImg: PropTypes.string.isRequired,
+  title: PropTypes.string.isRequired,
+  summary: PropTypes.string.isRequired,
+  genres: PropTypes.arrayOf(PropTypes.string).isRequired,
+};
+```
+props의 타입을 특정 타입으로 고정시킬 수 있다.  
+isRequired속성을 추가하면 해당 컴포넌트를 사용할 때 반드시 값을 넘겨줘야 한다.
