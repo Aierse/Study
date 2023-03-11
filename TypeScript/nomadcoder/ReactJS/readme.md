@@ -123,3 +123,54 @@ Movie.propTypes = {
 ```
 props의 타입을 특정 타입으로 고정시킬 수 있다.  
 isRequired속성을 추가하면 해당 컴포넌트를 사용할 때 반드시 값을 넘겨줘야 한다.
+### react-router-dom
+url 라우팅을 도와주는 확장
+#### 설치
+```
+npm i react-router-dom
+```
+#### 예시
+```js
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+import Detail from "./routes/Detail";
+import Home from "./routes/Home";
+
+function App() {
+  return (
+    <BrowserRouter>
+      <Routes>
+        <Route
+          path="/" // 연결될 url
+          element={<Home />} // 표시할 페이지
+        />
+        <Route
+          path="/movie"
+          element={<Detail />}
+        />
+      </Routes>
+    </BrowserRouter>
+  );
+}
+
+export default App;
+```
+App.js에서 라우팅을 시작한다면 BrowserRouter, Routes, Route를 임포트한다.  
+**Route** 에서 path는 url을, element는 해당 url로 접근시 보여줄 컴포넌트를 의미한다.    
+#### Link
+```js
+import PropTypes from "prop-types";
+import { Link } from "react-router-dom";
+
+function Movie({ title }) {
+  return (
+    <div>
+      <h2>
+        <Link to="/movie">{title}</Link>
+      </h2>
+    </div>
+  );
+}
+```
+**Link** 에서 to 속성으로 연결한다.  
+**a href="/movie"** 와의 차이점은 href로 이동할 경우 페이지가 새로고침된다.  
+Link는 페이지의 내용만 바꾸기 때문에 새로고침 되지 않는다.
