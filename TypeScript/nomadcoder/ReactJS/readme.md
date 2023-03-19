@@ -190,3 +190,21 @@ package.json에 아래 코드를 추가한다
 npm run build
 gh-pages -d build
 ```
+npm run build: 리액트를 빌드함
+gh-pages -d build: build폴더를 설정한 홈페이지에 등록  
+package.json script 항목에 아래와 같이 설정하면 ***npm run deploy*** 명령어로 빌드와 등록을 동시에 진행할 수있다.
+```
+"scripts": {
+    "deploy": "gh-pages -d build",
+    "predeploy": "npm run build"
+}
+```
+#### 주의 사항
+##### 인증 오류
+gh-pages -d build 명령어 실패로 fatal: Authentication failed for "홈페이지" 오류가 나타날 수 있다.  
+![image](https://user-images.githubusercontent.com/68111814/226185264-f3a7da4f-79e9-4f25-a5b5-92d4eb88be22.png)
+레포지토리 설정에서 Git Pages 의 브랜치가 None으로 설정되어 있으면 해당 오류가 나타날 수 있다.
+##### 빈페이지
+url 오류로 정보를 제대로 불러오지 못할 수 있다.  
+React-Router 속성에 basename={process.env.PUBLIC_URL} 을 추가한다.  
+![image](https://user-images.githubusercontent.com/68111814/226185423-e6e6f464-bdb8-4db8-ae5c-3ac7dace14b0.png)
