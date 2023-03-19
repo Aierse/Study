@@ -174,3 +174,19 @@ function Movie({ title }) {
 **Link** 에서 to 속성으로 연결한다.  
 **a href="/movie"** 와의 차이점은 href로 이동할 경우 페이지가 새로고침된다.  
 Link는 페이지의 내용만 바꾸기 때문에 새로고침 되지 않는다.
+
+### gh-pages
+#### 설치
+```
+npm i gh-pages
+```
+#### 예시
+package.json에 아래 코드를 추가한다
+```
+"homepage": "https://{깃허브 닉네임}.github.io/{레포지토리 이름}"
+```
+터미널에서 아래 명령어를 입력한다
+```
+npm run build
+gh-pages -d build
+```
