@@ -101,6 +101,7 @@ function App() {
 
 ## 확장
 ### prop-types
+
 컴포넌트 props의 타입을 검사해주는 확장 
 #### 설치
 ```
@@ -123,7 +124,10 @@ Movie.propTypes = {
 ```
 props의 타입을 특정 타입으로 고정시킬 수 있다.  
 isRequired속성을 추가하면 해당 컴포넌트를 사용할 때 반드시 값을 넘겨줘야 한다.
+
+---
 ### react-router-dom
+
 url 라우팅을 도와주는 확장
 #### 설치
 ```
@@ -175,6 +179,7 @@ function Movie({ title }) {
 **a href="/movie"** 와의 차이점은 href로 이동할 경우 페이지가 새로고침된다.  
 Link는 페이지의 내용만 바꾸기 때문에 새로고침 되지 않는다.
 
+---
 ### gh-pages
 #### 설치
 ```
